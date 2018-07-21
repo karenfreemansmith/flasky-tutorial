@@ -7,3 +7,12 @@ python3 -m venv env-name
 source env-name/bin/activate
 pip install flask
 ```
+
+## Running Application
+* Debug is optional and provides hot reloading
+* Runs on localhost:5000 by default
+```
+export FLASK_APP=hello.py
+export FLASK_DEBUG=1
+flask run
+```
