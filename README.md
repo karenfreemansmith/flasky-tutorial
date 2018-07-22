@@ -16,3 +16,10 @@ export FLASK_APP=hello.py
 export FLASK_DEBUG=1
 flask run
 ```
+
+## Running in Docker
+* Runs on localhost:5000 (or whatever port you map it to in the run command)
+```
+docker build -t friendly-name .
+docker run -p 5000:80 friendly-name
+```
