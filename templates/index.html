@@ -4,7 +4,13 @@
 
 {% block page_content %}
   <div class='page-header'>
-    <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
+    <h1>Hello, {% if name %}{{ name|capitalize }}{% else %}Stranger{% endif %}!</h1>
+    {%  if not known %}
+    <p>Pleased to meet you!</p>
+    {% else %}
+    <p>Happy to see you again!</p>
+    {% endif %}
+
     {{ wtf.quick_form(form)}}
   </div>
   <h3>The local time is: {{ moment(current_time).format('LLL') }} - that was {{ moment(current_time).fromNow(refresh=True) }}</h3>
