@@ -4,6 +4,10 @@ MAINTAINER karenfreemansmith@gmail.com
 WORKDIR /flasky
 add . /flasky
 
+$ export http_proxy="http://webproxy.us164.corpintra.net:8080"
+$ export https_proxy="http://webproxy.us164.corpintra.net:8080"
+$ export ftp_proxy="http://webproxy.us164.corpintra.net:8080"
+
 RUN pip install -r requirements.txt
 
 EXPOSE 80
